@@ -3,7 +3,7 @@
 This repo is a continuation of [a gist I
 made](https://gist.github.com/BadmanBarista/47c34b5e9dca3910bba89c4bcdeb58b6)
 over a year ago. Turns out Wahoo update their VTM themes from time to time and
-adds new things, so the VTM themes I created then no-longer work now.
+add new things. Thus the VTM themes I created then no-longer work now.
 
 To solve this issue, this repository will automatically check for wahoo updates
 every sunday at midnight and recreate the themes if it finds one.
