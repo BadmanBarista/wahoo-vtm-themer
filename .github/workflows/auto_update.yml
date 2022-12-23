@@ -1,0 +1,38 @@
+name: "Automatic update"
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "59 23 * * 0"
+
+jobs:
+  auto-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Check for update
+        run: |
+          version=$(./check_for_update)
+
+          if [ -z "$version" ]; then
+            echo "no new version"
+            exit 0
+          fi
+
+          ./fetch_latest
+          ./extract_default_vtm
+          ./create_custom_themes
+
+          if [ -z "$(git status --porcelain)" ]; then 
+            echo "no changes to existing theme"
+            exit 0 # no changes made.
+          fi
+
+          git config --global user.name 'Badman Barista'
+          git config --global user.email 'badmanbarista@gmail.com'
+          git commit -am "Automated update for $version"
+          git tag "v$version"
+          git push
+          git push --tags

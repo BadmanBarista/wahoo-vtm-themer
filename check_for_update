@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+mkdir -p bin
+curl http://bolt.wahoofitness.com/boltapp/version.json --output bin/version.json
+version=$(cat bin/version.json | jq '."std-version"')
+
+if [ $(git tag -l "v$version") ]; then
+	exit 0
+else
+	echo $version
+fi
