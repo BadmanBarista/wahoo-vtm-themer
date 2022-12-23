@@ -3,7 +3,6 @@
 	version="1" xmlns="http://opensciencemap.org/rendertheme"
 	xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
 
-	<!-- test trigger -->
 	<stylemenu id="stylemenu" defaultvalue="BOLT_2" defaultlang="en">
 
 		<layer id="BOLT_2">

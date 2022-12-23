@@ -12,7 +12,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Check for update
+      - name: Update
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           version=$(./check_for_update)
 
@@ -25,14 +27,17 @@ jobs:
           ./extract_default_vtm
           ./create_custom_themes
 
-          if [ -z "$(git status --porcelain)" ]; then 
-            echo "no changes to existing theme"
-            exit 0 # no changes made.
-          fi
-
           git config --global user.name 'Badman Barista'
           git config --global user.email 'badmanbarista@gmail.com'
-          git commit -am "Automated update for $version"
+
+          if [ -z "$(git status --porcelain)" ]; then 
+            echo "no changes to existing theme"
+          else
+            git commit -am "Automated update for $version"
+            git push
+          fi
+
           git tag "v$version"
-          git push
           git push --tags
+
+          gh release create "v$version" *.xml
