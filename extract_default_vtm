@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+rm -rf bin/apk
+unzip bin/boltapp.apk -d bin/apk
+cp bin/apk/assets/maps/vtm-elemnt/vtm-elemnt.xml bin/vtm-element-default.xml
+

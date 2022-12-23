@@ -1,0 +1,4 @@
+
+bin/
+.envrc
+.direnv/

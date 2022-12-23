@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+curl http://bolt.wahoofitness.com/boltapp/version.json --output bin/version.json
+url=$(cat bin/version.json | jq '."std-url"' | tr -d \")
+curl $url --output bin/boltapp.apk
+
+cat bin/version.json | jq '."std-version"'

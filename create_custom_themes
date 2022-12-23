@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+sed -E 's/(<style-line id="bolt2-cycle.*width=)(".*")(.*)/\1"0.75"\3/g' \
+	./bin/vtm-element-default.xml > ./vtm-element-THIN.xml
+sed -E 's/(^.*)(<style-line id="\w+-cycle(-\w+)?)/\1<!-- \2 --!>/g' \
+	./bin/vtm-element-default.xml > ./vtm-element-HIDDEN.xml
