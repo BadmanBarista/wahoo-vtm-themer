@@ -242,10 +242,10 @@
 					<line cat="roam2-dark" stroke="#555555" width="1.2" dasharray="10,12" cap="round"/>
 				</m>
 				<m e="way" k="highway" v="service" zoom-min="12">
-					<line cat="bolt2" stroke="#AAAAAA" width="1.3"/>
-					<line cat="bolt2-dark" stroke="#AAAAAA" width="1.3"/>
-					<line cat="roam2" stroke="#555555" width="1.3"/>
-					<line cat="roam2-dark" stroke="#555555" width="1.3"/>
+					<line cat="bolt2" stroke="#AAAAAA" width="1.0"/>
+					<line cat="bolt2-dark" stroke="#555555" width="1.0"/>
+					<line cat="roam2" stroke="#AAAAAA" width="1.0"/>
+					<line cat="roam2-dark" stroke="#555555" width="1.0"/>
 				</m>
 				<m e="way" k="highway" v="construction">
 					<line cat="bolt2" stroke="#AAAAAA" width="1.3" dasharray="15,2" cap="butt"/>
