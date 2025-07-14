@@ -110,10 +110,10 @@
 	<style-line id="roam2-track-other-cycle-dark" use="roam2-track-other-dark" stroke="#00AAFF"/>
 
 	<!-- Paved Cycleways-->
-	<!-- <style-line id="bolt2-cycle --!>" cat="bolt2" stroke="#0000FF" width="2.0"/>
-	<!-- <style-line id="bolt2-cycle-dark --!>" cat="bolt2-dark" stroke="#0000FF" width="2.0"/>
-	<!-- <style-line id="roam2-cycle --!>" cat="roam2" use="bolt2-cycle"/>
-	<!-- <style-line id="roam2-cycle-dark --!>" cat="roam2-dark" use="bolt2-cycle-dark"/>
+	<!-- <style-line id="bolt2-cycle" cat="bolt2" stroke="#0000FF" width="2.0"/> --!>
+	<!-- <style-line id="bolt2-cycle-dark" cat="bolt2-dark" stroke="#0000FF" width="2.0"/> --!>
+	<!-- <style-line id="roam2-cycle" cat="roam2" use="bolt2-cycle"/> --!>
+	<!-- <style-line id="roam2-cycle-dark" cat="roam2-dark" use="bolt2-cycle-dark"/> --!>
 
 	<!-- end region -->
 
